@@ -1,17 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-const handleClick = () => {
-  console.log("Clicked");
-}
+
+
 
 function App() {
+  const [count , setCount  ] =  useState(0);
+
+  const handleClick = () => {
+    setCount(count  + 1);
+  }
+
   return (
    <div>
-    <button onClick={handleClick}>
-      Add Animal
-    </button>
+    <button onClick={handleClick}>Tambah angka</button>
+    <p>angka : {count} </p>
    </div>
+
+   
   );
 }
 
