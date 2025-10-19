@@ -7,7 +7,7 @@ import searchImages from './api';
 
 function App() {
   const handleSubmit = (term) => {
-   searchImages(term);
+   console.log("Do a search with , " , term);
   };
 
 
