@@ -1,25 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import AnimalShow from './animalShow';
 
 
+function getRandomAnimal(){
+  const animals = ["bird" , "cat" , "dog" , "elephant" , "fish"];
+  return animals[Math.floor(Math.random() * animals.length)];
+}
 
 
 function App() {
-  const [count , setCount  ] =  useState(0);
+  const [animals , setAnimals] = useState([]);
 
   const handleClick = () => {
-    setCount(count  + 1);
+    setAnimals([...animals , getRandomAnimal()]);
   }
 
-  return (
-   <div>
-    <button onClick={handleClick}>Tambah angka</button>
-    <p>angka : {count} </p>
-   </div>
+  const renderedAnimal = animals.map((animal , index) => {
+    return <AnimalShow type={animal} key={index}/>
+  })
 
-   
-  );
+  return (
+    <div className='app'>
+      <button onClick={handleClick}>Add Animals</button>
+      <div className='animal-list'>
+        Animal : {renderedAnimal}
+      </div>
+    </div>
+  )
 }
 
 export default App;
