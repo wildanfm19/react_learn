@@ -38,9 +38,6 @@ const BookShow = ({book , OnDelete , OnEdit}) => {
                 Delete
             </button>
         </div>
-        <div>
-            TESTING
-        </div>
 
     </div>
   )
