@@ -14,7 +14,7 @@ const Button = ({
    
 
   return (
-   <button className='text-red-500'>{children}</button>
+   <button className='bg-blue-500 text-white px-4 py-3 my-3 border border-blue-600'>{children}</button>
   )
 }
 
