@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div>
-        <Button>Button 1</Button>
+        <Button success primary>Button 1</Button>
       </div>
 
        <div>
