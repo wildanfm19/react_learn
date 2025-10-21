@@ -6,23 +6,23 @@ function App() {
   return (
     <>
       <div>
-        <Button></Button>
+        <Button>Button 1</Button>
       </div>
 
        <div>
-        <Button></Button>
+        <Button>Button 2</Button>
       </div>
 
        <div>
-        <Button></Button>
+        <Button>Button 3</Button>
       </div>
 
        <div>
-        <Button></Button>
+        <Button>Button 4</Button>
       </div>
 
        <div>
-        <Button></Button>
+        <Button>Button 5</Button>
       </div>
     </>
   );
