@@ -14,7 +14,7 @@ const Button = ({
    
 
   return (
-   <button>{children}</button>
+   <button className='text-red-500'>{children}</button>
   )
 }
 
