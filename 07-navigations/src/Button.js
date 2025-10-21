@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import className from 'classnames';
+import classNames from 'classnames';
+
 
 const Button = ({
     children ,
@@ -11,10 +14,19 @@ const Button = ({
     outline,
     rounded
 }) => {
+
+    const classes = className('px-3 py-1.5 border' , {
+        'border-blue-500 bg-blue-500 text-white' : primary,
+        'border-gray-900 bg-gray-900 text-white' : secondary,
+        'border-green-500 bg-green-500 text-white' : success,
+        'border-yellow-500 bg-yellow-500 text-white' : warning,
+        'border-red-500 bg-red-500 text-white' : danger,
+       
+    })
    
 
   return (
-   <button className='bg-blue-500 text-white px-4 py-3 my-3 border border-blue-600'>{children}</button>
+   <button className={classes}>{children}</button>
   )
 }
 

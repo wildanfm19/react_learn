@@ -6,23 +6,23 @@ function App() {
   return (
     <>
       <div>
-        <Button success >Button 1</Button>
+        <Button primary >Button 1</Button>
       </div>
 
        <div>
-        <Button>Button 2</Button>
+        <Button secondary>Button 2</Button>
       </div>
 
        <div>
-        <Button>Button 3</Button>
+        <Button success>Button 3</Button>
       </div>
 
        <div>
-        <Button>Button 4</Button>
+        <Button warning>Button 4</Button>
       </div>
 
        <div>
-        <Button>Button 5</Button>
+        <Button danger>Button 5</Button>
       </div>
     </>
   );
