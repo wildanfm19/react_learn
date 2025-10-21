@@ -1,10 +1,8 @@
 import { useContext } from 'react';
 import BookShow from './BookShow';
 import BooksContext from '../context/books';
+import useBookContext from '../hooks/use-books-context';
 
-function useBookContext(){
-  return useContext(BooksContext);
-}
 
 
 function BookList() {
