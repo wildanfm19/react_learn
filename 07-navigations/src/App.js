@@ -4,10 +4,14 @@ import Button from "./Button";
 import { MdAddCall } from "react-icons/md";
 
 function App() {
+
+  const handleClick = () => {
+    console.log("test");
+  }
   return (
     <>
       <div>
-        <Button  primary rounded >Button 1</Button>
+        <Button  primary rounded onClick={handleClick} >Button 1</Button>
       </div>
 
        <div>

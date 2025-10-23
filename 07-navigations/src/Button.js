@@ -12,7 +12,8 @@ const Button = ({
     warning,
     danger ,
     outline,
-    rounded
+    rounded,
+    ...rest
 }) => {
 
     const classes = className('px-3 py-1.5 border' , {
@@ -35,7 +36,7 @@ const Button = ({
    
 
   return (
-   <button className={classes}>{children}</button>
+   <button  {...rest} className={classes}>{children}</button>
   )
 }
 
