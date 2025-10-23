@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import { MdArrowForwardIos } from "react-icons/md";
 
 const Accordion = ({ items }) => {
-  const renderedItems = items.map((item , index) => {
+    const [expandedIndex , setExpandedIndex] = useState(0);
+
+ 
+
+  const renderedItems = items.map((item  , index) => {
+     const isExpanded = index === expandedIndex;
+    
+
+     const content = isExpanded && <div>{item.content}</div>
+     
     return (
       <div key={item.id}>
-        <div>{item.label}</div>
-        <div>{item.content}</div>
+        <div>{item.label} <MdArrowForwardIos onClick={() => setExpandedIndex(index)}/></div>
+        {content}
       </div>
     );
   });
+
+
   return (
     <div>
         {renderedItems}
