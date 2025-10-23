@@ -1,6 +1,7 @@
 
 import "./App.css";
 import Accordion from "./components/Accordion";
+import Accordion2 from "./components/Accordion2";
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
   ];
 
   return(
-     <Accordion items= {item}/>
+     <Accordion2 items= {item}/>
   )
 
  
