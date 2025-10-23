@@ -1,16 +1,17 @@
 
 import "./App.css";
 import Button from "./Button";
+import { MdAddCall } from "react-icons/md";
 
 function App() {
   return (
     <>
       <div>
-        <Button primary >Button 1</Button>
+        <Button  primary rounded >Button 1</Button>
       </div>
 
        <div>
-        <Button secondary>Button 2</Button>
+        <Button secondary rounded><MdAddCall/></Button>
       </div>
 
        <div>
