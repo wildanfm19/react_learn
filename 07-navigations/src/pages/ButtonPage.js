@@ -1,9 +1,8 @@
 
-import "./App.css";
-import Button from "./components/Button";
+import Button from "../components/Button";
 import { MdAddCall } from "react-icons/md";
 
-function App() {
+function ButtonPage() {
 
   const handleClick = () => {
     console.log("test");
@@ -33,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default ButtonPage;
