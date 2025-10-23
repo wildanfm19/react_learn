@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdArrowForwardIos } from "react-icons/md";
+import { MdArrowDropDown, MdArrowForwardIos, MdArrowRight } from "react-icons/md";
 
 const Accordion = ({ items }) => {
     const [expandedIndex , setExpandedIndex] = useState(0);
@@ -9,12 +9,15 @@ const Accordion = ({ items }) => {
   const renderedItems = items.map((item  , index) => {
      const isExpanded = index === expandedIndex;
     
+    const icon = <span>
+        {isExpanded ? <MdArrowDropDown/> : <MdArrowRight/>}
+    </span>
 
      const content = isExpanded && <div>{item.content}</div>
      
     return (
       <div key={item.id}>
-        <div>{item.label} <MdArrowForwardIos onClick={() => setExpandedIndex(index)}/></div>
+        <div onClick={() => setExpandedIndex(index)}>{item.label} {icon}</div>
         {content}
       </div>
     );
